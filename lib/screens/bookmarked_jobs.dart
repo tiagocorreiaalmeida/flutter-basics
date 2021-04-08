@@ -19,7 +19,12 @@ class BookMarkedJobs extends StatelessWidget {
             jobs: bookmarkedJobs.jobs,
           );
         } else {
-          return Text("No jobs bookmared");
+          return Center(
+            child: Text(
+              "No jobs bookmared",
+              style: Theme.of(context).textTheme.headline6,
+            ),
+          );
         }
       },
     ));

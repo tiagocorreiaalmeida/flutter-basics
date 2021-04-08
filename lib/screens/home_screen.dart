@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import "../../api.dart";
-import "../../widgets/jobs_list.dart";
+import '../api.dart';
+import '../widgets/jobs_list.dart';
 
 final jobsRequest = getJobs();
 

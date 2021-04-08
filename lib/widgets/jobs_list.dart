@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import "../models/job.dart";
 import "../providers/bookmarked_jobs.dart";
 import "./job_card.dart";
-import "../screens/job_details/jobs_details.dart";
+import '../screens/jobs_details.dart';
 
 class JobsList extends StatelessWidget {
   final List<Job> jobs;

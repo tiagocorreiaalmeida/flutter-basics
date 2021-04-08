@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './providers/bookmarked_jobs.dart';
-import './screens/home_tabs/home_tabs.dart';
-import './screens/job_details/jobs_details.dart';
+import 'screens/home_tabs.dart';
+import 'screens/jobs_details.dart';
 
 void main() {
   runApp(MyApp());

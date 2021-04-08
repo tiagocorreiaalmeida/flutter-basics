@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import "../../models/job.dart";
+import '../models/job.dart';
 
 class JobDetailsScreenArguments {
   final Job job;

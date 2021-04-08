@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:jobs_finder/screens/bookmarked_jobs/bookmarked_jobs.dart';
-import 'package:jobs_finder/screens/home/home_screen.dart';
+import 'package:jobs_finder/screens/bookmarked_jobs.dart';
+import 'package:jobs_finder/screens/home_screen.dart';
 
 class HomeTabs extends StatefulWidget {
   @override

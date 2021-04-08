@@ -29,17 +29,14 @@ class JobCard extends StatelessWidget {
   }) : super(key: key);
 
   Widget getImage() {
-    const imageHeight = 200.0;
     return companyLogo != null
         ? Image.network(
             companyLogo,
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
+            fit: BoxFit.contain,
           )
         : Image.asset(
             imageFallBack,
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
+            fit: BoxFit.contain,
           );
   }
 
@@ -48,18 +45,26 @@ class JobCard extends StatelessWidget {
     return Card(
       child: InkWell(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
               height: 200,
+              padding: EdgeInsets.all(8),
               child: Stack(
                 children: [
-                  getImage(),
+                  Container(
+                    alignment: Alignment.center,
+                    child: getImage(),
+                  ),
                   Positioned(
-                    child: IconButton(
-                      icon:
-                          Icon(isBookmarked ? Icons.star : Icons.star_outline),
-                      onPressed: () => onBookmarkPress(id),
+                    child: CircleAvatar(
+                      backgroundColor: Theme.of(context).primaryColor,
+                      child: IconButton(
+                        color: Colors.white,
+                        icon: Icon(
+                            isBookmarked ? Icons.star : Icons.star_outline),
+                        onPressed: () => onBookmarkPress(id),
+                      ),
                     ),
                     top: 16,
                     right: 16,
